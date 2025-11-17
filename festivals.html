@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ===== Header Section ===== */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(90deg, #0033cc, #0066ff);
+      color: white;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header img {
+      height: 65px;
+      width: 65px;
+      border-radius: 50%;
+      margin-right: 15px;
+      border: 3px solid white;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .header h1 {
+      font-size: 34px;
+      font-weight: bold;
+      margin: 0;
+      position: relative;
+      letter-spacing: 1.5px;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: slideIn 1.5s ease-out forwards, glow 2s ease-in-out infinite alternate;
+      text-shadow: 0 0 10px #ffffff, 0 0 20px #00ccff, 0 0 30px #00ccff;
+    }
+
+    /* Glow Animation */
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff, 0 0 30px #00ccff;
+      }
+      to {
+        text-shadow: 0 0 20px #eee5e5, 0 0 30px #00ccff, 0 0 40px #00ccff;
+      }
+    }
+
+    /* Slide-in + Fade animation */
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: matrix(-20px) ;
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Fade-in for logo */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Underline Animation */
+    .header h1::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 0;
+      height: 3px;
+      background: white;
+      box-shadow: 0 0 10px #00ccff;
+      animation: underline 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes underline {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    /* ===== Gallery Grid ===== */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      padding: 30px;
+      justify-items: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.08);
+    }
+
+    .caption {
+      margin-top: 8px;
+      font-weight: bold;
+      font-size: 16px;
+      color: #333;
+    }
+
+    /* ===== Responsive Design ===== */
+    @media (max-width: 600px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+      .header h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Logo and Animated Title -->
+  <div class="header">
+    <img src="Kolhapur logo.jpg" alt="Logo" sizes="200px"> <!-- Replace with your logo -->
+    <h1>Festivals of Kolhapur</h1>
+  </div>
+
+  <!-- Gallery Section -->
+  <div class="gallery">
+    <div>
+      <img src="navaratri.jpg" alt="During Navaratri Mahalaxmi Temple ">
+      <div class="caption">During Navaratri Mahalaxmi Temple</div>
+    </div>
+
+    <div>
+      <img src="Ganesh Chaturti.jpg" alt="Ganesh Festival">
+      <div class="caption">Ganesh Festival(Mahaganpati)</div>
+    </div>
+
+    <div>
+      <img src="jotiba yatara.jpg" alt="Jotiba Yatara">
+      <div class="caption">Jotiba Yatara</div>
+    </div>
+
+    <div>
+      <img src="pathannkodoli.jpg" alt="Pathannkodoli">
+      <div class="caption">Pathannkodoli</div>
+    </div>
+    <div>
+      <img src="dasara.jpg" alt="Dasara In Kolhapur">
+      <div class="caption">Dasara In Kolhapur</div>
+    </div>
+    <div>
+      <img src="diwali kolhapur.jpg" alt="Diwali In Kolhapur">
+      <div class="caption">Diwali In Kolhapur</div>
+    </div>
+  </div>
+
+</body>
+</html>

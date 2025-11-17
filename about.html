@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Kolhapur</title>
+  <style>
+    /* ----- Basic Reset ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ----- Hero Section ----- */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/2/2e/Mahalakshmi_Temple_Kolhapur.jpg') 
+                  center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .hero h1 {
+      position: relative;
+      font-size: 2.8rem;
+      text-align: center;
+      z-index: 1;
+      animation: fadeInDown 1.2s ease;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ----- About Section ----- */
+    .about {
+      max-width: 1000px;
+      margin: 60px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      padding: 40px 50px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .about h2 {
+      color: #b23b00;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      border-left: 4px solid #b23b00;
+      padding-left: 10px;
+    }
+
+    .about p {
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+      text-align: justify;
+    }
+
+    /* ----- Footer ----- */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      color: #777;
+      background-color: #fff;
+      border-top: 1px solid #eee;
+      font-size: 0.9rem;
+    }
+
+    /* ----- Responsive Design ----- */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .about {
+        padding: 30px 25px;
+        margin: 40px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <h1>Kolhapur — The Cultural Crown of Maharashtra</h1>
+  </section>
+
+  <section class="about">
+    <h2>About Kolhapur</h2>
+    <p>
+      Kolhapur, known as the <strong>“Cultural Capital of Southern Maharashtra”</strong>, is a city that gracefully blends
+      history, devotion, and modern progress. Nestled along the banks of the Panchganga River, it is most famous for the 
+      sacred <strong>Mahalaxmi Temple</strong>, one of India’s most revered Shakti Peethas.
+    </p>
+    <p>
+      The city’s royal heritage dates back to the Maratha Empire and the rule of the <strong>Bhosale dynasty</strong>.
+      Kolhapur’s culture thrives in its art, jewelry, and cuisine — from the iconic <strong>Kolhapuri Chappals</strong> 
+      and <strong>Kolhapuri Saaj</strong> to the fiery <strong>Tambda–Pandhra Rassa</strong> and <strong>Misal</strong>.
+    </p>
+    <p>
+      Today, Kolhapur stands as a vibrant center of <em>heritage, faith, and enterprise</em>. Its people, temples, and 
+      traditions continue to reflect the city’s enduring spirit — a living testament to Maharashtra’s royal and cultural pride.
+    </p>
+  </section>
+
+  <footer>
+    © 2025 | Designed with ❤️ to celebrate the spirit of Kolhapur
+  </footer>
+
+</body>
+</html>
